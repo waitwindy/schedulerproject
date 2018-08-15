@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <jobs>
+
+        <Schedule name="convergeRawDataJob" interval="0 1/1 * * * ?" group="bigdata"
+                  class="com.ultrapower.scheduler.job.convergeRawDataJob"></Schedule>
+
+    </jobs>
+
+    <internals>
+
+        <Schedule name="convergeHourDataJob" interval="0 15 */1 * * ?" group="bigdata"
+                  class="com.ultrapower.scheduler.job.convergeHourDataJob"></Schedule>
+
+        <Schedule name="convergeDayDataJob" interval="0 0 2 * * ?" group="bigdata"
+                  class="com.ultrapower.scheduler.job.convergeDayDataJob"></Schedule>
+
+        <Schedule name="convergeMonthDataJob" interval="0 0 1 1 * ?" group="bigdata"
+                  class="com.ultrapower.scheduler.job.convergeMonthDataJob"></Schedule>
+
+    </internals>
+
+
+</root>
